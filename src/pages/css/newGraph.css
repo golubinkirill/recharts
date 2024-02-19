@@ -31,7 +31,7 @@
     font-size: 30px;
   }
 
-  /* Стили для поля ввода */
+
 input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
@@ -46,7 +46,7 @@ input[type="text"] {
     font-style: italic;
   }
   
-  /* Стили для кнопок */
+
   button {
     padding: 10px 20px;
     border: none;
@@ -73,7 +73,7 @@ input[type="text"] {
   }
   
 
-  /* Стили для селекта */
+
 select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -81,8 +81,8 @@ select {
     font-size: 16px;
     width: 300px;
     outline: none;
-    appearance: none; /* Убираем стандартное внешнее отображение селекта */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Добавляем кастомную иконку для стрелки */
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 20px;
@@ -96,7 +96,7 @@ select {
     border-color: #007bff;
   }
   
-  /* Стили для опций селекта */
+
   option {
     font-size: 16px;
   }
