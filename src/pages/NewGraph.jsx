@@ -42,7 +42,7 @@ const NewGraph = ()=>{
         dispatch({type:'CHANGE_GRAPH_VALUES', LISTS:inputs, TYPE:type});
       }
 
-      function safeGraph(){
+      function saveGraph(){
 
         const now = new Date();
         const hours = String(now.getHours()).padStart(2, '0'); 
@@ -64,7 +64,7 @@ const NewGraph = ()=>{
         setsType(localStorage.getItem('LastSessionGraphValuesAmount'));
         dispatch({type:'CHANGE_GRAPH_VALUES', LISTS:LastSessionGraphData.split(',').map(Number), TYPE:type});
         setInputs(LastSessionGraphData.split(','))
-        setMessage(`Вы успешно загрузили последний график (${LastSessionTime})`)
+        setMessage(`You have successfully downloaded the latest chart (${LastSessionTime})`)
       }
 
       function downloadGraph(){
@@ -82,39 +82,39 @@ const NewGraph = ()=>{
             <div className="content-graph-settings-menu">
 
                 <div className="graph-settings-inputs">
-                    <button onClick={handleAddInput}>Создать значение</button>
+                    <button onClick={handleAddInput}>Add value</button>
                         {inputs.map((value, index) => (
                             <input
                             key={index}
                             type="text"
                             value={value}
                             onChange={(e) => handleChange(index, e.target.value)}
-                            placeholder="Введите значение"
+                            placeholder="Enter value here"
                             />
                         ))}
                 </div>
 
                 <div className="graph-settings-style" >
                         <select onChange={(e) => handleSelectChange(e.target.value)}>
-                        <option value={'diagramm'}>Диаграмма</option>
-                        <option value={'line-graph'}>Линейный График</option>
-                        <option value={'pole-graph'}>Столбцовый График</option>
+                        <option value={'diagramm'}>Diagramm</option>
+                        <option value={'line-graph'}>Line Chart</option>
+                        <option value={'pole-graph'}>Pole Chart</option>
                         </select>
                         <select onChange={(e) => handleSelectChange_valueType(e.target.value)}>
-                        <option value={'default'}>Обычный график</option>
-                        <option value={'2r'}>График с двуми значениями</option>
-                        <option value={'3r'}>График с тремя значениями</option>
+                        <option value={'default'}>Default Chart</option>
+                        <option value={'2r'}>2 Values Chart</option>
+                        <option value={'3r'}>3 Values Chart</option>
                         </select>
                         {_message}
                 </div>
                     <div className="graph-settings-buttons-funcs">
-                        <div className="graph-create-button"><button onClick={()=>createGraph(stype)}>Применить</button></div>
+                        <div className="graph-create-button"><button onClick={()=>createGraph(stype)}>Apply</button></div>
 
-                        <div className="graph-create-button"><button onClick={()=>safeGraph()}>Сохранить</button></div>
+                        <div className="graph-create-button"><button onClick={()=>saveGraph()}>Save</button></div>
 
-                        <div className="graph-create-button"><button onClick={()=>loadGraph()}>Открыть последний</button></div>
+                        <div className="graph-create-button"><button onClick={()=>loadGraph()}>Open recent</button></div>
 
-                        <div className="graph-create-button"><button onClick={()=>downloadGraph()}>Скачать график</button></div>
+                        <div className="graph-create-button"><button onClick={()=>downloadGraph()}>Download Chart</button></div>
                     </div>
             </div>
         </div>
