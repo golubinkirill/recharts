@@ -1,0 +1,118 @@
+  .content {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .content-graph-preview {
+    background-color: rgb(210, 236, 255);
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .content-graph-settings-menu {
+    background-color: aliceblue;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .graph-settings-inputs{
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+  }
+  .graph-settings-inputs input{
+    width: 100%;
+    margin-top: 5px;
+    height: 27px;
+    font-size: 30px;
+  }
+
+  /* Стили для поля ввода */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #00ff51;
+    font-style: italic;
+  }
+  
+  /* Стили для кнопок */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #43d38d;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00b377;
+  }
+  
+  button:active {
+    background-color: #008055;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+
+  /* Стили для селекта */
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    appearance: none; /* Убираем стандартное внешнее отображение селекта */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Добавляем кастомную иконку для стрелки */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    background-color: #43d38d;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    color:white;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  /* Стили для опций селекта */
+  option {
+    font-size: 16px;
+  }
+  .graph-settings-buttons-funcs{
+    display: flex;
+    flex-direction: column;
+  }
+  .graph-settings-buttons-funcs button{
+    margin-bottom: 20px;
+    width: 180px;
+  }
+
+  .graph-settings-style{
+    display: flex;
+    
+    flex-direction: column;
+  }
+  
+  .graph-settings-style select{margin-bottom: 20px;}
